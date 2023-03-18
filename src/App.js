@@ -1,29 +1,13 @@
 import React, { useState } from "react";
+import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
+import AddPost from "./Components/DisplayPosts/AddPost/AddPost";
 
 function App() {
   const [posts, setPosts] = useState([{ poster: "me", blurb: "nonsense" }]);
   return (
     <div>
-      <form>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th>Post</th>
-            </tr>
-          </thead>
-          <tbody>
-            {posts.map((post) => {
-              return (
-                <tr>
-                  <td>{post.poster}</td>
-                  <td>{post.blurb}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </form>
+      <DisplayPosts postEntries={posts} />
+      <AddPost />
     </div>
   );
 }

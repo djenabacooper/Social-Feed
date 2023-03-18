@@ -8,7 +8,7 @@ const DisplayPosts = (props) => {
         </tr>
       </thead>
       <tbody>
-        {props.posts.map((post) => {
+        {props.postEntries.map((post) => {
           return (
             <tr>
               <td>{post.poster}</td>
