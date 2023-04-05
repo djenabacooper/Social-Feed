@@ -1,0 +1,8 @@
+.null {
+  background-color: grey;
+}
+
+.table-button {
+  float: inline-end;
+  width: 100%;
+}

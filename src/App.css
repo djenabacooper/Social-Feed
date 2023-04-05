@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.border-box {
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+table,
+th,
+td {
+  columns: 1px solid black;
+  width: 150px;
+}

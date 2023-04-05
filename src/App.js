@@ -1,13 +1,41 @@
 import React, { useState } from "react";
 import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
-import AddPost from "./Components/DisplayPosts/AddPost/AddPost";
+import AddPost from "./Components/AddPost/AddPost";
+import LikeButton from "./Components/LikeButton/LikeDislikeButton";
+import "./App.css";
 
 function App() {
-  const [posts, setPosts] = useState([{ poster: "me", blurb: "nonsense" }]);
+  const [posts, setPosts] = useState([{ poster: "me", blurb: "thoughts" }]);
+
+  function addNewPost(post) {
+    let tempPosts = [...posts, post];
+    setPosts(tempPosts);
+  }
+
   return (
-    <div>
-      <DisplayPosts postEntries={posts} />
-      <AddPost />
+    <div className="container">
+      <div className="col-md-6">
+        <div className="row">
+          <AddPost postAdd={addNewPost} />
+        </div>
+        <div>SocialFeed</div>
+
+        <div className="body">
+          <div className="table">
+            <div className="col-md-6">
+              <div className="row">
+                <div className="col-mid-6">
+                  <div className="table-button">
+                    <div className="border-box">
+                      <DisplayPosts postEntries={posts} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
