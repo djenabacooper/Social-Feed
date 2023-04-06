@@ -1,12 +1,10 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-lone-blocks */
 import React, { Component, useState } from "react";
-import LikeButton from "../../Components/LikeButton/LikeDislikeButton";
+import LikeDislikeButton from "../../Components/LikeButton/LikeDislikeButton";
+/*import LikeDislikeButton from "./LikeButton/Components";*/
 /*import clickLike from "../../Components/LikeButton/LikeDislikeButton";*/
 
-function clickLike() {
-  document.getElementsByClassName("button")[0].style.backgroundColor =
-    "Lightgreen";
-}
 const DisplayPosts = (props) => {
   return (
     <table>
@@ -24,9 +22,7 @@ const DisplayPosts = (props) => {
                 <td>{post.blurb}</td>
               </div>
               <div>
-                <form onClick={clickLike}>
-                  <button type="button">like</button>
-                </form>
+                <LikeDislikeButton></LikeDislikeButton>
               </div>
             </tr>
           );

@@ -2,13 +2,24 @@ import React, { Component, useState } from "react";
 import DisplayPosts from "../DisplayPosts/DisplayPosts";
 import "./LikeButtonCss.css";
 
-function clickLike(event) {
-  event.preventDefault();
-  document.getElementsByClassName("button")[0].style.backgroundColor =
-    "Lightgreen";
-}
+const LikeButton = (props) => {
+  const [buttonClass, setbuttonClass] = useState("inactive");
 
-const LikeButton = (props) => {};
+  function clickLike(event) {
+    event.preventDefault();
+    if (buttonClass === "inactive") {
+      setbuttonClass("active");
+    } else {
+      setbuttonClass("inactive");
+    }
+  }
+  return (
+    <div>
+      <button className={buttonClass} onClick={clickLike}>
+        like
+      </button>
+    </div>
+  );
+};
 
 export default LikeButton;
-document.onclick();

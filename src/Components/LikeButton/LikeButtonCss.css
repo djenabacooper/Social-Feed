@@ -1,5 +1,8 @@
-.null {
-  background-color: grey;
+.inactive {
+  background-color: lightgrey;
+}
+.active {
+  background-color: lightgreen;
 }
 
 .table-button {
