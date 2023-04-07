@@ -3,23 +3,35 @@ import DisplayPosts from "../DisplayPosts/DisplayPosts";
 import "./LikeButtonCss.css";
 
 const LikeButton = (props) => {
-  const [buttonClass, setbuttonClass] = useState("inactive");
+  const [likeClass, setlikeClass] = useState("inactive");
+  const [dislikeClass, setdislikeClass] = useState("null");
 
   function clickLike(event) {
     event.preventDefault();
-    if (buttonClass === "inactive") {
-      setbuttonClass("active");
+    if (likeClass === "inactive") {
+      setlikeClass("active");
     } else {
-      setbuttonClass("inactive");
+      setlikeClass("inactive");
     }
   }
   return (
     <div>
-      <button className={buttonClass} onClick={clickLike}>
+      <button className={likeClass} onClick={clickLike}>
         like
+      </button>
+      <button className={dislikeClass} onClick={clickDislike}>
+        hate
       </button>
     </div>
   );
+  function clickDislike(event) {
+    event.preventDefault();
+    if (dislikeClass === "null") {
+      setdislikeClass("hate");
+    } else {
+      setdislikeClass("null");
+    }
+  }
 };
 
 export default LikeButton;
