@@ -5,6 +5,14 @@
   background-color: lightgreen;
 }
 
+.null {
+  background-color: lightgrey;
+}
+
+.hate {
+  background-color: red;
+}
+
 .table-button {
   float: inline-end;
   width: 100%;
