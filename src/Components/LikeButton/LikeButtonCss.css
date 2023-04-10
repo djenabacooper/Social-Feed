@@ -13,7 +13,7 @@
   background-color: red;
 }
 
-.table-button {
-  float: inline-end;
+table.button {
+  float: right;
   width: 100%;
 }

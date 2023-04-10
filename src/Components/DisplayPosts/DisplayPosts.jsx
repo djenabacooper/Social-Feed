@@ -2,8 +2,9 @@
 /* eslint-disable no-lone-blocks */
 import React, { Component, useState } from "react";
 import LikeDislikeButton from "../../Components/LikeButton/LikeDislikeButton";
-/*import LikeDislikeButton from "./LikeButton/Components";*/
-/*import clickLike from "../../Components/LikeButton/LikeDislikeButton";*/
+import "../../Components/LikeButton/LikeButtonCss.css";
+import "./DisplayPostsCSS.css";
+/*import "../../Components/AddPost/AddPostCss.css";*/
 
 const DisplayPosts = (props) => {
   return (
@@ -21,7 +22,7 @@ const DisplayPosts = (props) => {
               <div className="col-4">
                 <td>{post.blurb}</td>
               </div>
-              <div>
+              <div className="like-hate">
                 <LikeDislikeButton></LikeDislikeButton>
               </div>
             </tr>

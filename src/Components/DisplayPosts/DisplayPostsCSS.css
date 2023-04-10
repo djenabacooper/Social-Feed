@@ -1,0 +1,31 @@
+.form-box input,
+textarea {
+  display: block;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  margin: 0.9vw 0;
+  border-radius: 5px;
+  font-size: 20px;
+  justify-content: center;
+}
+
+/*div.like-hate {
+  background-color: lightgrey;
+  color: black;
+  float: right;
+}*/
+
+table.button {
+  display: block;
+  justify-content: right;
+  width: 200%;
+}
+
+div.border-box {
+  display: block;
+  justify-content: right;
+  width: 200%;
+}
+
+* {
+  background-color: lightseagreen;
+}

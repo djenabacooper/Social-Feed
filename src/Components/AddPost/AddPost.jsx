@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AddPostCss.css";
 
 const AddPost = (props) => {
   const [name, setName] = useState("");
@@ -40,7 +41,9 @@ const AddPost = (props) => {
           class="form-control"
         />
       </div>
-      <button type="submit">Submit Post</button>
+      <div className="post">
+        <button type="submit">Submit Post</button>
+      </div>
     </form>
   );
 };
